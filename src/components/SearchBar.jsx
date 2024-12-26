@@ -1,10 +1,14 @@
 function SearchBar(props) {
 
     // console.log(props);
-    const { searchValue, setSearchValue } = props;
+    const { searchValue, setSearchValue,showInStockOnly, setShowInStockOnly } = props;
 
     const handleSearch = (event) => {
         setSearchValue(event.target.value);
+    }
+
+    const handleFilter = (event) => {
+        setShowInStockOnly(event.target.checked)
     }
 
   return (
@@ -15,7 +19,7 @@ function SearchBar(props) {
       </label>
       <div>
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleFilter}/>
           Only show products in stock
         </label>
       </div>
