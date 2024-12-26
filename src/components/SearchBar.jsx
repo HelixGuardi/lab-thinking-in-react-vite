@@ -12,13 +12,13 @@ function SearchBar(props) {
     }
 
   return (
-    <div>
-      <label>
+    <div className="searchBar-container">
+      <label className="searchBar-label">
         <p>Search</p>
         <input type="text" value={searchValue} onChange={handleSearch} />
       </label>
       <div>
-        <label>
+        <label className="checkbox-label">
           <input type="checkbox" onChange={handleFilter}/>
           Only show products in stock
         </label>

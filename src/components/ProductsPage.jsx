@@ -8,11 +8,6 @@ function ProductsPage() {
   const [searchValue, setSearchValue] = useState("");
   const [showInStockOnly, setShowInStockOnly] = useState(false);
 
-  
-//   const filteredProducts = jsonData.filter((eachProduct) => 
-//     eachProduct.name.toLowerCase().includes(searchValue.toLowerCase())
-//   )
-
     const filteredProducts = jsonData.filter((eachProduct) => {
         const matchesSearch = eachProduct.name
         .toLowerCase()
@@ -24,7 +19,7 @@ function ProductsPage() {
     })
 
   return (
-    <div>
+    <div className="general-container">
       <h1>IronStore</h1>
       <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} showInStockOnly={showInStockOnly} setShowInStockOnly={setShowInStockOnly}/>
       <ProductTable products={filteredProducts} />

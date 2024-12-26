@@ -4,7 +4,7 @@ function ProductTable(props) {
   const products = props.products;
 
   return (
-    <table>
+    <table className="table-container">
       <thead>
         <tr>
           <th>Name</th>
